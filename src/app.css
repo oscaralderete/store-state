@@ -1,0 +1,138 @@
+html,
+body {
+	min-height: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body>#app {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
+	>header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: .5em;
+
+		img {
+			height: 2em;
+			width: auto;
+		}
+	}
+
+	>main {
+		flex: 1;
+		padding: .5em;
+	}
+
+	>footer {
+		text-align: center;
+		border-top: solid 1px #ccc;
+	}
+}
+
+.page-loader {
+	height: 100%;
+	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='200' height='200' viewBox='0 0 100 100' preserveAspectRatio='xMidYMid'%3E%3Cg%3E%3Cpath d='M50 15A35 35 0 1 0 74.74873734152916 25.251262658470843' fill='none' stroke='%23000' stroke-width='3'%3E%3C/path%3E%3Cpath d='M49 3L49 27L61 15L49 3' fill='%23000'%3E%3C/path%3E%3CanimateTransform attributeName='transform' type='rotate' repeatCount='indefinite' dur='1s' values='0 50 50;360 50 50' keyTimes='0;1'/%3E%3C/g%3E%3C/svg%3E") center center no-repeat transparent;
+	background-size: 3em auto;
+}
+
+.list {
+	display: grid;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	grid-template-columns: repeat(8, 1fr);
+	gap: 2.5em 1em;
+
+	li {
+		display: flex;
+		flex-direction: column;
+
+		>section {
+			flex: 1;
+			display: flex;
+			flex-direction: column;
+
+			>h2 {
+				flex: 1;
+				font-size: 1em;
+			}
+
+			>div {
+				text-align: right;
+			}
+		}
+
+		>a {
+			text-decoration: none;
+			color: #000;
+
+			>span {
+				display: block;
+				background-color: #ddd;
+				text-align: center;
+				padding: .5em 0;
+				border-radius: .2em;
+			}
+		}
+	}
+}
+
+.capitalize {
+	text-transform: capitalize;
+}
+
+.right {
+	text-align: right;
+}
+
+.product-img {
+	height: 12em;
+	width: auto;
+}
+
+@media screen and (min-width: 35.5em) {
+	.list {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (min-width: 48em) {
+	.list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media screen and (min-width: 64em) {
+	.list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+@media screen and (min-width: 80em) {
+	.list {
+		grid-template-columns: repeat(4, 1fr);
+	}
+}
+
+@media screen and (min-width: 120em) {
+	.list {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+@media screen and (min-width: 160em) {
+	.list {
+		grid-template-columns: repeat(6, 1fr);
+	}
+}
+
+@media screen and (min-width: 240em) {
+	.list {
+		grid-template-columns: repeat(7, 1fr);
+	}
+}
