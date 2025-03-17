@@ -6,7 +6,7 @@
 
 <h1>User details</h1>
 
-<p>(This page uses <b>Svelte stores</b> to "cache" the fetched data)</p>
+<p>(This page uses <b>Svelte state()</b> to "cache" the fetched data)</p>
 
 <div>
 	<table>

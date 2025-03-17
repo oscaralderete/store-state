@@ -24,6 +24,8 @@
 
 {#if usersState.users.length > 0}
 	<h1>Users</h1>
+
+	<p>(This page uses <b>Svelte state()</b> to "cache" the fetched data)</p>
 	<UsersList users={usersState.users} />
 {:else}
 	<Loader />
